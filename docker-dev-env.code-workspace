@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "shared-docker-compose"
+		},
+		{
+			"path": "nginx"
+		},
+		{
+			"path": "Node-Rest-API"
+		},
+		{
+			"path": "react-frontend"
+		}
+	],
+	"settings": {}
+}

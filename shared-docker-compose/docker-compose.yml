@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  nginx:
+    image: nginx-proxy
+    build: 
+      context: ../nginx
+    ports: 
+      - "3000:80"
+  api:
+    image: node-rest-api
+    build: 
+      context: ../Node-Rest-API
+    ports: 
+      - "3001:8000"
+    depends_on: 
+      - "nginx"
+  web:
+    image: react-frontend
+    build: 
+      context: ../react-frontend
+    ports: 
+      - "3002:8001"
+    depends_on: 
+      - "nginx"
